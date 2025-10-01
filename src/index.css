@@ -78,3 +78,25 @@ a.btn-light{
   border: 2px solid transparent;
   color: var(--color-white);
 }
+@media (max-width: 576px) {
+  a {
+    font-size: 14px;
+    margin-right: 0.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  a.btn {
+    padding: 8px 12px;
+    width: 100%;
+  }
+
+  a.btn-light {
+    background: tomato;
+  }
+
+  a.btn-dark {
+    border-color: #ccc;
+  }
+}

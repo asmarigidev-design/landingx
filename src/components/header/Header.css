@@ -131,7 +131,9 @@ h1 span:nth-child(3){
      .header{
           flex-direction: column;
      }
-   
+     .header h1{
+               font-size: 2.5rem;
+          }
      .header-right, .header-left{
           width: 90%;
           display: flex;
@@ -141,7 +143,7 @@ h1 span:nth-child(3){
           margin: 0 auto;
      }
      .header-right{
-          margin-bottom: 4rem;
+          margin-bottom: rem;
      }
      .header-left img {
           width: 75%;
