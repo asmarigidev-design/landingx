@@ -24,11 +24,14 @@ html {
 }
 
 body {
-  direction: rtl;
   font-family: 'vazir' !important;
   overflow-x: hidden;
-}
+    direction: rtl;
 
+}
+.rtl{
+
+}
 .container {
   max-width: 1000px;
   margin: 0 auto;

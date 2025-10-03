@@ -15,7 +15,7 @@ useEffect(()=>{
   return (
     <section id="header"> {/* سکشن اصلی هدر سایت // Main header section */}
       <div className="container header"> {/* کانتینر کلی هدر // Main header container */}
-        <div className="header-right" data-aos="fade-right"> {/* بخش راست با افکت اسکرول // Right section with scroll animation */}
+        <div className="header-right rtl" data-aos="fade-right"> {/* بخش راست با افکت اسکرول // Right section with scroll animation */}
           <h1>
             <span>پیشرو در سطح جهانی</span>
             <span>امنیت در همه پلتفرم ها</span>

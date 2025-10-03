@@ -1,11 +1,19 @@
 #header{
      position: relative;
      overflow-x: hidden;
+     box-sizing: border-box;
 
+}
+* {
+  box-sizing: border-box;
+}
+html, body {
+  max-width: 100%;
 }
 
 
 .header{
+     
      display: flex;
      align-items: center;
      justify-content: center;
@@ -145,12 +153,16 @@ h1 span:nth-child(3){
           margin: 0 auto;
      }
      .header-right{
-          margin-bottom: rem;
+          margin-bottom: 1rem;
      }
      .header-left img {
           width: 75%;
      }
      section{
           padding: 8rem 0;
-     }
+               box-sizing: border-box;
+overflow-X:hidden;
+}
+
+     
 }

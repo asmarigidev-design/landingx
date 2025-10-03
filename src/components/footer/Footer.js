@@ -14,7 +14,7 @@ const Footer = () => {
     <section id="footer"> {/* سکشن اصلی فوتر سایت // Main footer section */}
       <div className="container footer"> {/* کانتینر کلی فوتر // Main footer container */}
         
-        <div className="quick-access"> {/* بخش لینک‌های مفید // Useful links section */}
+        <div className="quick-access rtl"> {/* بخش لینک‌های مفید // Useful links section */}
           <h4>لینک های مفید</h4>
           <div className="footer-links">
             <a href="/">&bull; پشتیبانی</a>
@@ -25,7 +25,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="support"> {/* بخش پشتیبانی تکراری برای ساختار فوتر // Support section (repeated for layout) */}
+        <div className="support rtl"> {/* بخش پشتیبانی تکراری برای ساختار فوتر // Support section (repeated for layout) */}
           <h4>پشتیبانی</h4>
           <div className="footer-links">
             <a href="/"> پشتیبانی</a>
@@ -36,7 +36,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="contact"> {/* اطلاعات تماس با آیکون‌ها // Contact information with icons */}
+        <div className="contact rtl" > {/* اطلاعات تماس با آیکون‌ها // Contact information with icons */}
           <h4>راه های ارتباطی</h4>
           <div className="footer-contact">
            <p><FaMapMarkerAlt />  آدرس : شیراز سمت راست</p>

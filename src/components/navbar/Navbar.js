@@ -43,6 +43,9 @@ const NewNavbar = () => {
       <nav className={`glass-navbar ${scrolled ? 'scrolled' : ''}`}>
         {/* لوگو */}
         <div className="glass-logo">
+            <span className="glass-logo-text">
+            social<span>X</span>
+          </span>
           <SiAnaconda 
             color="#00ff88" 
             size={32} 
@@ -51,9 +54,7 @@ const NewNavbar = () => {
               animation: 'glow 2s ease-in-out infinite alternate'
             }} 
           />
-          <span className="glass-logo-text">
-            Nova<span>X</span>
-          </span>
+        
         </div>
 
         {/* منوی دسکتاپ */}
