@@ -1,0 +1,234 @@
+/* استایل جدید نوبار - مدرن و شیشه‌ای */
+.glass-navbar {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0px;
+  z-index: 1000;
+  transition: all 0.4s ease;
+    direction:ltr;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+html, body {
+  max-width: 100%;
+}
+
+/* لوگو با انیمیشن جدید */
+.glass-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.glass-logo:hover {
+  transform: scale(1.05);
+}
+
+.glass-logo-text {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+}
+
+.glass-logo-text span {
+  color: #00ff88;
+  text-shadow: 0 0 20px #00ff88;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88;
+  }
+  to {
+    text-shadow: 0 0 15px #00ff88, 0 0 30px #00ff88, 0 0 40px #00ff88;
+  }
+}
+
+/* منوی دسکتاپ */
+.glass-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  direction:rtl;
+}
+
+.glass-nav-links li {
+  position: relative;
+}
+
+.glass-nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-nav-links a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.glass-nav-links a:hover::before {
+  left: 100%;
+}
+
+.glass-nav-links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #00ff88;
+  transform: translateY(-2px);
+}
+
+/* آیکون منوی موبایل */
+.glass-menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+}
+
+.glass-menu-line {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 3px 20px;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+/* انیمیشن تبدیل به X */
+.glass-menu-icon.active .glass-menu-line:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+  background: #00ff88;
+}
+
+.glass-menu-icon.active .glass-menu-line:nth-child(2) {
+  opacity: 0;
+}
+
+.glass-menu-icon.active .glass-menu-line:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+  background: #00ff88;
+}
+
+/* منوی موبایل */
+.glass-mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(10, 25, 47, 0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+.glass-mobile-menu.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.glass-mobile-links {
+  list-style: none;
+  text-align: center;
+}
+
+.glass-mobile-links li {
+  margin: 2rem 0;
+  animation: slideUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.glass-mobile-links li:nth-child(1) { animation-delay: 0.1s; }
+.glass-mobile-links li:nth-child(2) { animation-delay: 0.2s; }
+.glass-mobile-links li:nth-child(3) { animation-delay: 0.3s; }
+.glass-mobile-links li:nth-child(4) { animation-delay: 0.4s; }
+.glass-mobile-links li:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.glass-mobile-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 300;
+  padding: 12px 30px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.glass-mobile-links a:hover {
+  color: #00ff88;
+  background: rgba(0, 255, 136, 0.1);
+  transform: scale(1.1);
+}
+
+/* رسپانسیو */
+@media screen and (max-width: 768px) {
+  .glass-nav-links {
+    display: none;
+  }
+  
+  .glass-menu-icon {
+    display: flex;
+  }
+  
+  .glass-navbar {
+    padding: 0 1rem;
+  }
+  
+  .glass-logo-text {
+    font-size: 24px;
+  }
+}
+
+/* انیمیشن اسکرول */
+.glass-navbar.scrolled {
+  height: 70px;
+  background: rgba(10, 25, 47, 0.95);
+  backdrop-filter: blur(25px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
